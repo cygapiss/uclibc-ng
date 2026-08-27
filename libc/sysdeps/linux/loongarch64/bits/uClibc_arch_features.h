@@ -11,7 +11,7 @@
 #define __UCLIBC_MMAP_HAS_6_ARGS__
 
 /* does your target use statx */
-#undef __UCLIBC_HAVE_STATX__
+#define __UCLIBC_HAVE_STATX__
 
 #undef __UCLIBC_SYSCALL_ALIGN_64BIT__
 
@@ -38,5 +38,11 @@
 
 /* define if target supports CFI pseudo ops */
 #define __UCLIBC_HAVE_ASM_CFI_DIRECTIVES__
+
+/* define if target should skip .init processing */
+#define __UCLIBC_SKIP_DT_INIT__
+
+/* define if target should skip .fini processing */
+#define __UCLIBC_SKIP_DT_FINI__
 
 #endif /* _BITS_UCLIBC_ARCH_FEATURES_H */
