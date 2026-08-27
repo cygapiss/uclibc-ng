@@ -156,7 +156,6 @@ endchoice
 config TARGET_LDSO_NAME
 	string
 	default "ld64-uClibc" if TARGET_ia64
-	default "ld64-uClibc" if TARGET_loongarch64
 	default "ld64-uClibc" if TARGET_powerpc64
 	default "ld64-uClibc" if TARGET_sparc64
 	default "ld64-uClibc" if TARGET_x86_64
