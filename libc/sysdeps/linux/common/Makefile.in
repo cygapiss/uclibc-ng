@@ -92,10 +92,7 @@ endif
 # Cancellation points block in this multiplexer and must be unwindable.
 CFLAGS-__socketcall.c = -fasynchronous-unwind-tables
 
-ifneq ($(ARCH_HAS_DEPRECATED_SYSCALLS),y)
-# No conversion is needed for new architectures
-CSRC- += xstatconv.c
-endif
+# xstatconv.c always built (old kernels need it even without ARCH_HAS_DEPRECATED_SYSCALLS)
 # stubbed out in mman.h
 CSRC-$(ARCH_USE_MMU) += msync.c
 # we need these internally: getdomainname.c
